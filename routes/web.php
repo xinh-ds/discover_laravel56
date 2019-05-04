@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/collections', function () {
+    return view('collections.index');
+})->name('collections');
+
+Route::resource('/employees', 'EmployeeController');
